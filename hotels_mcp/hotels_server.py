@@ -5,7 +5,7 @@ import signal
 import sys
 import argparse
 from typing import Dict, List, Any, Optional
-from fastmcp import FastMCP
+from mcp.server.fastmcp import FastMCP
 from dotenv import load_dotenv
 import os
 

@@ -5,4 +5,4 @@ A Model Context Protocol (MCP) server that allows LLMs to search for hotels
 and destinations using the Booking.com API.
 """
 
-from mcp import __version__ 
+from hotels_mcp import __version__ 
