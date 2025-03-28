@@ -109,6 +109,13 @@ This opens an interactive UI where you can:
      - `checkout_date`: Check-out date (YYYY-MM-DD)
      - `adults`: Number of adults (default: 2)
 
+## Code Structure
+
+- `main.py`: The entry point for the server
+- `hotels_mcp/`: The core MCP implementation
+  - `__init__.py`: Package initialization
+  - `hotels_server.py`: MCP server implementation with tool definitions
+
 ## License
 
 MIT © Esa Krissa 2025
