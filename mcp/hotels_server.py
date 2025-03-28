@@ -5,7 +5,7 @@ import signal
 import sys
 import argparse
 from typing import Dict, List, Any, Optional
-from mcp.server.fastmcp import FastMCP
+from fastmcp import FastMCP
 from dotenv import load_dotenv
 import os
 
@@ -205,7 +205,8 @@ def handle_shutdown(signum, frame):
     logger.info("Received shutdown signal, shutting down gracefully...")
     sys.exit(0)
 
-if __name__ == "__main__":
+def main():
+    """Main function to run the Hotels MCP server."""
     # Parse command line arguments
     parser = argparse.ArgumentParser(description='Hotels MCP Server')
     args = parser.parse_args()
@@ -218,8 +219,12 @@ if __name__ == "__main__":
         # Use STDIO transport - it's the most reliable for Claude for Desktop
         logger.info("Starting Hotels MCP Server with stdio transport...")
         mcp.run(transport='stdio')
+        return 0
     except Exception as e:
         logger.error(f"Error starting server: {str(e)}")
-        sys.exit(1)
+        return 1
     finally:
-        logger.info("Hotels MCP Server shutting down...") 
+        logger.info("Hotels MCP Server shutting down...")
+
+if __name__ == "__main__":
+    sys.exit(main()) 

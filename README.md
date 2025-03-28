@@ -56,8 +56,8 @@ The current implementation uses two endpoints:
 
 Run the server with:
 
-```
-python hotels_server.py
+```bash
+python main.py
 ```
 
 The server uses stdio transport by default for compatibility with MCP clients like Cursor.
@@ -72,7 +72,7 @@ The server uses stdio transport by default for compatibility with MCP clients li
      "hotels": {
        "command": "python",
        "args": [
-         "/path/to/hotels_mcp_server/hotels_server.py"
+         "/path/to/hotels_mcp_server/main.py"
        ]
      }
    }
@@ -88,8 +88,8 @@ The server uses stdio transport by default for compatibility with MCP clients li
 
 Test your server with MCP Inspector:
 
-```
-npx @modelcontextprotocol/inspector python hotels_server.py
+```bash
+npx @modelcontextprotocol/inspector python main.py
 ```
 
 This opens an interactive UI where you can:
