@@ -1,0 +1,1 @@
+# Hotels MCP Server package 
